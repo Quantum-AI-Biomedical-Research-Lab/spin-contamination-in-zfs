@@ -1,0 +1,52 @@
+{
+ "CH2": {
+  "D_cm": 0.784974426313438,
+  "N_principal_axis": 1377448.477659203,
+  "N_full_separate": 2985642.8130204612,
+  "N_full_shared": 3216709.1805678373,
+  "union_terms": 2520,
+  "union_groups": 893,
+  "ratio_shared_to_axis": 2.3352664239276826,
+  "ratio_separate_to_axis": 2.167516870100418
+ },
+ "NH": {
+  "D_cm": 1.7089069749255654,
+  "N_principal_axis": 2010057.7999466339,
+  "N_full_separate": 2574432.0653683003,
+  "N_full_shared": 2331719.1348647443,
+  "union_terms": 2448,
+  "union_groups": 838,
+  "ratio_shared_to_axis": 1.1600259131486916,
+  "ratio_separate_to_axis": 1.2807751426036855
+ },
+ "NH_stretch": {
+  "D_cm": 0.8928505361976522,
+  "N_principal_axis": 3118695.0845029294,
+  "N_full_separate": 5162576.054159222,
+  "N_full_shared": 4597032.193238862,
+  "union_terms": 2448,
+  "union_groups": 838,
+  "ratio_shared_to_axis": 1.4740242533109182,
+  "ratio_separate_to_axis": 1.6553641552880618
+ },
+ "O2": {
+  "D_cm": 0.8871704437693395,
+  "N_principal_axis": 10273767.800185828,
+  "N_full_separate": 15728688.25248491,
+  "N_full_shared": 12712945.74061687,
+  "union_terms": 1296,
+  "union_groups": 578,
+  "ratio_shared_to_axis": 1.2374180522541032,
+  "ratio_separate_to_axis": 1.5309561748320237
+ },
+ "TMM": {
+  "D_cm": 0.033613217539687705,
+  "N_principal_axis": 5228887.385476783,
+  "N_full_separate": 54555515.322807565,
+  "N_full_shared": 20063452.224966504,
+  "union_terms": 408,
+  "union_groups": 157,
+  "ratio_shared_to_axis": 3.8370404152693505,
+  "ratio_separate_to_axis": 10.433484468289626
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "CH2": {
+  "GSD": {
+   "n_chem": 11,
+   "cnot_chem": 816,
+   "n_D1": 13,
+   "cnot_D1": 932,
+   "cnot_per_op_mean": 81.48148148148148
+  },
+  "QEB": {
+   "n_chem": 11,
+   "cnot_chem": 448,
+   "n_D1": 12,
+   "cnot_D1": 460,
+   "cnot_per_op_mean": 37.87096774193548
+  },
+  "sfGSD": {
+   "n_chem": 7,
+   "cnot_chem": 1336,
+   "n_D1": 4,
+   "cnot_D1": 792,
+   "cnot_per_op_mean": 261.5238095238095
+  }
+ },
+ "NH": {
+  "GSD": {
+   "n_chem": 20,
+   "cnot_chem": 1440,
+   "n_D1": 22,
+   "cnot_D1": 1664,
+   "cnot_per_op_mean": 78.04081632653062
+  },
+  "QEB": {
+   "n_chem": 20,
+   "cnot_chem": 792,
+   "n_D1": 22,
+   "cnot_D1": 888,
+   "cnot_per_op_mean": 37.03448275862069
+  },
+  "sfGSD": {
+   "n_chem": 14,
+   "cnot_chem": 2888,
+   "n_D1": 12,
+   "cnot_D1": 2192,
+   "cnot_per_op_mean": 199.77777777777777
+  }
+ },
+ "NH_stretch": {
+  "GSD": {
+   "n_chem": 14,
+   "cnot_chem": 928,
+   "n_D1": 16,
+   "cnot_D1": 1152,
+   "cnot_per_op_mean": 85.18518518518519
+  },
+  "QEB": {
+   "n_chem": 16,
+   "cnot_chem": 572,
+   "n_D1": 23,
+   "cnot_D1": 864,
+   "cnot_per_op_mean": 37.19298245614035
+  },
+  "sfGSD": {
+   "n_chem": 12,
+   "cnot_chem": 2192,
+   "n_D1": 16,
+   "cnot_D1": 3296,
+   "cnot_per_op_mean": 228.62222222222223
+  }
+ },
+ "O2": {
+  "GSD": {
+   "n_chem": 6,
+   "cnot_chem": 576,
+   "n_D1": 6,
+   "cnot_D1": 576,
+   "cnot_per_op_mean": 86.0
+  },
+  "QEB": {
+   "n_chem": 6,
+   "cnot_chem": 288,
+   "n_D1": 6,
+   "cnot_D1": 288,
+   "cnot_per_op_mean": 48.0
+  },
+  "sfGSD": {
+   "n_chem": 4,
+   "cnot_chem": 1264,
+   "n_D1": 4,
+   "cnot_D1": 1264,
+   "cnot_per_op_mean": 267.42857142857144
+  }
+ },
+ "TMM": {
+  "GSD": {
+   "n_chem": 5,
+   "cnot_chem": 304,
+   "n_D1": 5,
+   "cnot_D1": 304,
+   "cnot_per_op_mean": 60.8
+  },
+  "QEB": {
+   "n_chem": 5,
+   "cnot_chem": 152,
+   "n_D1": 5,
+   "cnot_D1": 152,
+   "cnot_per_op_mean": 30.4
+  },
+  "sfGSD": {
+   "n_chem": 4,
+   "cnot_chem": 656,
+   "n_D1": 4,
+   "cnot_D1": 656,
+   "cnot_per_op_mean": 164.0
+  }
+ },
+ "naph_rohf": {
+  "GSD": {
+   "n_chem": 249,
+   "cnot_chem": 32984,
+   "n_D1": 209,
+   "cnot_D1": 26968,
+   "cnot_per_op_mean": 137.01333333333332
+  },
+  "QEB": {
+   "n_chem": null,
+   "cnot_chem": null,
+   "n_D1": null,
+   "cnot_D1": null,
+   "cnot_per_op_mean": 44.13333333333333
+  },
+  "sfGSD": {
+   "n_chem": 155,
+   "cnot_chem": 75272,
+   "n_D1": null,
+   "cnot_D1": null,
+   "cnot_per_op_mean": 514.336
+  }
+ },
+ "naph_no": {
+  "GSD": {
+   "n_chem": 291,
+   "cnot_chem": 39232,
+   "n_D1": 262,
+   "cnot_D1": 34180,
+   "cnot_per_op_mean": 136.26666666666668
+  },
+  "QEB": {
+   "n_chem": null,
+   "cnot_chem": null,
+   "n_D1": null,
+   "cnot_D1": null,
+   "cnot_per_op_mean": 44.013333333333335
+  },
+  "sfGSD": {
+   "n_chem": 191,
+   "cnot_chem": 91264,
+   "n_D1": null,
+   "cnot_D1": null,
+   "cnot_per_op_mean": 499.4655870445344
+  }
+ }
+}

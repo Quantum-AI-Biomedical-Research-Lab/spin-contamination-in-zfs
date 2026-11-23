@@ -1,0 +1,90 @@
+{
+ "E0": -383.40803512454977,
+ "E1": -383.33807274431757,
+ "D_exact": 0.08390901593997335,
+ "thresholds": [
+  {
+   "thresh": 0.01,
+   "L": 18,
+   "Lxi": 125,
+   "lambda_DF": 14.952792432965216,
+   "dE0_mEh": -12.462168987553923,
+   "dD_pct": 2.1156304045538996,
+   "gap_mEh": 70.81870274384983
+  },
+  {
+   "thresh": 0.003,
+   "L": 21,
+   "Lxi": 174,
+   "lambda_DF": 15.055797553875948,
+   "dE0_mEh": -1.1111171016864319,
+   "dD_pct": -0.38333965813969917,
+   "gap_mEh": 70.21962519456793
+  },
+  {
+   "thresh": 0.001,
+   "L": 21,
+   "Lxi": 183,
+   "lambda_DF": 15.063781539351696,
+   "dE0_mEh": 1.0006490030605164,
+   "dD_pct": -0.17695013358359793,
+   "gap_mEh": 70.06876184294697
+  },
+  {
+   "thresh": 0.0003,
+   "L": 26,
+   "Lxi": 214,
+   "lambda_DF": 15.068289448677247,
+   "dE0_mEh": 0.19043191844048124,
+   "dD_pct": -0.09867318892525981,
+   "gap_mEh": 69.84347014929426
+  },
+  {
+   "thresh": 0.0001,
+   "L": 28,
+   "Lxi": 236,
+   "lambda_DF": 15.069628181686944,
+   "dE0_mEh": 0.09430095775542213,
+   "dD_pct": -0.01834657193350237,
+   "gap_mEh": 69.9671983911685
+  }
+ ],
+ "chosen": {
+  "thresh": 0.0001,
+  "L": 28,
+  "Lxi": 236,
+  "lambda_DF": 15.069628181686944,
+  "dE0_mEh": 0.09430095775542213,
+  "dD_pct": -0.01834657193350237,
+  "gap_mEh": 69.9671983911685
+ },
+ "lambda_pauli": 29.756137697635317,
+ "T": 42.88018775295102,
+ "eps": 0.001,
+ "toffoli_per_walk_step": 2730,
+ "toffoli_per_controlled_step": 2754,
+ "logical_qubits": 329,
+ "qpe_register_removed": 27,
+ "walk_steps_mean_numerator": 2158.4401,
+ "walk_steps_mean_denominator": 1504.235,
+ "walk_steps_max_4sigma": 10512,
+ "lambda_T_over_walk": 2.093200011555732,
+ "toffoli_per_circuit_mean": 5944344.0353999995,
+ "toffoli_per_circuit_max": 28950048,
+ "shots": 232603571.42973194,
+ "N_D": 191389667.29925293,
+ "F": 1.215340277832438,
+ "toffoli_total": 1382675652441064.8,
+ "physical_qubits": 1132288,
+ "circuit_time_s": 141.178193,
+ "circuit_time_max_s": 832.31388,
+ "code_distance": 23,
+ "total_time_days_sequential": 380075.8321735646,
+ "qpe_toffoli_chem_acc": 40390350,
+ "qpe_iterations": 14795,
+ "qsvt_degree": 2150,
+ "ae_repetitions": 33845,
+ "ae_toffoli_total": 400799259000,
+ "toffoli_rate_per_s": 42105.25654907624,
+ "ae_time_days": 110.17342471463397
+}
