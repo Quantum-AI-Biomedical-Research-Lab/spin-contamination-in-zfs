@@ -79,37 +79,14 @@ All files listed below are in `scripts/`.
 | `test_zfs.py`, `test_zfs2.py`, `test_vqe.py`, `test_sparse.py`, `stress_test.py` | Validation checks (Table S3) |
 | `results/` | JSON results and logs |
 
-The stored 20-qubit ADAPT states (`results/naph_no_*_states.npy`, about 300 MB) are not
-included in the archive; `naph_run.py <pool> 300 <hours> no` regenerates them.
+The stored 20-qubit ADAPT states (`results/naph_no_*_states.npy`, about 300 MB) are not included in the archive; `naph_run.py <pool> 300 <hours> no` regenerates them.
 
 ## Orbital gauge
 
 `run.axis_gauge` fixes degenerate active ROHF orbital pairs of linear molecules (NH, O2) to pi_x / pi_y. It is applied in `run.py`, `theory_check.setup` (used by `remedies.build` and all later 12-qubit scripts), `measure.setup` and, as the reference orientation for the random rotations, in `spread.setup_rot`. Without it the orientation returned by the eigensolver is arbitrary, and the O2 results differ between machines. `results/pipeline_O2_gauge.log` records the regeneration of all O2-dependent results with this gauge. TMM has a degenerate e'' pair that is not fixed; its shot estimates (`results/shots_seeds.json`, repository only) can vary at the 10% level between environments.
 
-## Reproduce
 
-```
-python scripts/test_zfs.py && python scripts/test_zfs2.py && python scripts/test_vqe.py && python scripts/test_sparse.py
-for s in CH2 NH NH_stretch O2 TMM; do python scripts/run.py $s; done
-python scripts/measure.py && python scripts/measure_full.py && python scripts/shots_seeds.py
-python scripts/cost.py && python scripts/o2_convergence.py
-python scripts/theory_check.py && python scripts/stress_test.py t1 CH2 O2 TMM && python scripts/stress_test.py t3 CH2 NH_stretch O2
-python scripts/errbar.py small
-python scripts/naph_geom.py && python scripts/naph_setup.py && python scripts/naph_setup_no.py
-for p in GSD QEB sfGSD; do python scripts/naph_run.py $p 300 5 rohf; python scripts/naph_run.py $p 300 4 no; done   # hours each
-python scripts/errbar.py naph no && python scripts/stopping.py && python scripts/analyze_naph.py figures
-python scripts/cnot_counts.py
-python scripts/remedies.py && python scripts/remedies_post.py && python scripts/naph_remedies.py
-python scripts/spread.py && for s in 1 2 3; do for p in GSD sfGSD; do python scripts/naph_spread.py $p $s; python scripts/naph_spread.py $p $s 0.16 30 330 8 rohf; done; done
-python scripts/spread_analyze.py && python scripts/shotnoise.py && python scripts/errbar_ceiling.py
-python scripts/penalty.py && python scripts/penalty_scan.py && python scripts/penalty_noise3.py && python scripts/penalty_shots.py
-python scripts/fix_study.py && python scripts/krylov_naph.py && python scripts/shiftinvert_test.py naph
-python scripts/naph_penalty.py GSD 3 0 30 420 12   # hours; resumes from its checkpoint
-python scripts/theory_check.py && python scripts/naph_bounds.py && python scripts/make_guarantee_table.py tables
-python scripts/property_filter.py && python scripts/naph_filter.py && python scripts/naph_pen_filter.py && python scripts/filter_compile.py   # spin densities, Gaussian filter and its cost (MU_F=1 python scripts/property_filter.py gives the 1 Eh spin-shift check)
-python scripts/filter_guarantee.py && python scripts/naph_certificate.py && python scripts/w_bound.py && python scripts/qpe_compare.py && python scripts/certified_cost.py && python scripts/w_bound_cost.py && python scripts/sec2_stress.py   # after filter_compile.py and naph_bounds.py
-python scripts/make_tables.py tables && python scripts/make_si_tables.py tables && python scripts/make_figures.py figures
-python scripts/make_framework_table.py tables && python scripts/make_fig_guarantee.py figures && python scripts/make_toc.py figures
-```
 
 All numbers in the manuscript come from `results/*.json` and the logs.
+
+This work is supported by the National Science and Technology Council (Taiwan) grant No. NSTC 114-2112-M-182-002-MY3 and Chang Gung Memorial Hospital grant No. BMRPL94.
