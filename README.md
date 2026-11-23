@@ -13,9 +13,26 @@ pip install -r requirements.txt
 pip install git+https://github.com/pyscf/properties
 ```
 
-Run the scripts from this directory with `PYTHONPATH` set to it. Generated LaTeX table bodies (`tables/`), logs (`logs/`) and Python caches are not tracked (see `.gitignore`); the `make_*` scripts regenerate the tables from `results/`.
+## Layout and usage
+
+```
+README.md  requirements.txt  .gitignore
+scripts/   all Python scripts and shared modules (zfs.py, vqe.py, ...)
+results/   JSON results, logs and stored states behind every table and figure
+```
+
+Run every script from the repository root, so that `results/` is found:
+
+```
+export PYTHONPATH=$PWD/scripts     # lets the scripts import the shared modules in scripts/
+python scripts/run.py CH2
+```
+
+The `make_*` scripts write LaTeX table bodies to `tables/` and figures to `figures/` (or to a directory given as the first argument). These folders, `logs/` and Python caches are not tracked (see `.gitignore`).
 
 ## Files
+
+All files listed below are in `scripts/`.
 
 | File | Purpose |
 | --- | --- |
@@ -50,7 +67,7 @@ Run the scripts from this directory with `PYTHONPATH` set to it. Generated LaTeX
 | `make_toc.py` | TOC graphic (`toc_graphic.pdf`) from the result files |
 | `w_bound.py` | Scalable bound on the spectral width W of X (2 x Pauli 1-norm of its Jordan-Wigner image) and the certified 0.1% filter length with this bound (Section 4.5, Section S5); writes `results/w_bound.json` |
 | `w_bound_cost.py` | Compiled cost of the certified naphthalene protocol with W_1 (longer filter and tighter eps_sim) and the cost of preparing the VQE state (Section 4.5, Section S5); writes `results/w_bound_cost.json` |
-| `sec2_stress.py` | Adversarial stress test of every statement of Section 2: eq 3 for S = 3/2 and 2 against the full first-order H_SS, and eqs 4-13, the two-stage filter and error-budget item (i) on 4.2e5 random, adversarial and complex-phase states for the four 12-qubit molecules and twelve spin-adapted model spectra (Section S6); writes `results/sec2_stress.json` |
+| `sec2_stress.py` | Adversarial stress test of every statement of Section 2: eq 2 for S = 3/2 and 2 against the full first-order H_SS, and eqs 4-13, the two-stage filter and error-budget item (i) on 4.2e5 random, adversarial and complex-phase states for the four 12-qubit molecules and twelve spin-adapted model spectra (Section S6); writes `results/sec2_stress.json` |
 | `v2rdm_bound.py` | Classical check of hypothesis (H2): lower bound on E0 from a two-particle RDM relaxation (D, Q and G conditions, fixed N_alpha, N_beta and <S^2>) for every system (Discussion, Section S6); writes `results/v2rdm_bound.json` |
 | `finite_shot.py` | End-to-end finite-shot simulation of the certified protocol: measured filter center and sigma, two-stage filter, certified length, coherent evolution errors and binomial Hadamard-test outcomes with a block-encoded estimator; 1000 replicas per ADAPT state, sensitivity scenarios and an explicit time-sampling check (Section 4.5, Section S7); writes `results/finite_shot.json` |
 | `make_finite_shot_tables.py` | Table S6 and the sensitivity table (repository only) from `results/finite_shot.json` |
@@ -72,31 +89,27 @@ included in the archive; `naph_run.py <pool> 300 <hours> no` regenerates them.
 ## Reproduce
 
 ```
-python test_zfs.py && python test_zfs2.py && python test_vqe.py && python test_sparse.py
-for s in CH2 NH NH_stretch O2 TMM; do python run.py $s; done
-python measure.py && python measure_full.py && python shots_seeds.py
-python cost.py && python o2_convergence.py
-python theory_check.py && python stress_test.py t1 CH2 O2 TMM && python stress_test.py t3 CH2 NH_stretch O2
-python errbar.py small
-python naph_geom.py && python naph_setup.py && python naph_setup_no.py
-for p in GSD QEB sfGSD; do python naph_run.py $p 300 5 rohf; python naph_run.py $p 300 4 no; done   # hours each
-python errbar.py naph no && python stopping.py && python analyze_naph.py ../paper
-python cnot_counts.py
-python remedies.py && python remedies_post.py && python naph_remedies.py
-python spread.py && for s in 1 2 3; do for p in GSD sfGSD; do python naph_spread.py $p $s; python naph_spread.py $p $s 0.16 30 330 8 rohf; done; done
-python spread_analyze.py && python shotnoise.py && python errbar_ceiling.py
-python penalty.py && python penalty_scan.py && python penalty_noise3.py && python penalty_shots.py
-python fix_study.py && python krylov_naph.py && python shiftinvert_test.py naph
-python naph_penalty.py GSD 3 0 30 420 12   # hours; resumes from its checkpoint
-python theory_check.py && python naph_bounds.py && python make_guarantee_table.py ../manuscript/tables
-python property_filter.py && python naph_filter.py && python naph_pen_filter.py && python filter_compile.py   # spin densities, Gaussian filter and its cost (MU_F=1 python property_filter.py gives the 1 Eh spin-shift check)
-python filter_guarantee.py && python naph_certificate.py && python w_bound.py && python qpe_compare.py && python certified_cost.py && python w_bound_cost.py && python sec2_stress.py   # after filter_compile.py and naph_bounds.py
-python make_tables.py ../manuscript/tables && python make_si_tables.py ../manuscript/tables && python make_figures.py ../manuscript
-python make_framework_table.py ../manuscript/tables && python make_fig_guarantee.py ../manuscript && python make_toc.py ../manuscript
+python scripts/test_zfs.py && python scripts/test_zfs2.py && python scripts/test_vqe.py && python scripts/test_sparse.py
+for s in CH2 NH NH_stretch O2 TMM; do python scripts/run.py $s; done
+python scripts/measure.py && python scripts/measure_full.py && python scripts/shots_seeds.py
+python scripts/cost.py && python scripts/o2_convergence.py
+python scripts/theory_check.py && python scripts/stress_test.py t1 CH2 O2 TMM && python scripts/stress_test.py t3 CH2 NH_stretch O2
+python scripts/errbar.py small
+python scripts/naph_geom.py && python scripts/naph_setup.py && python scripts/naph_setup_no.py
+for p in GSD QEB sfGSD; do python scripts/naph_run.py $p 300 5 rohf; python scripts/naph_run.py $p 300 4 no; done   # hours each
+python scripts/errbar.py naph no && python scripts/stopping.py && python scripts/analyze_naph.py figures
+python scripts/cnot_counts.py
+python scripts/remedies.py && python scripts/remedies_post.py && python scripts/naph_remedies.py
+python scripts/spread.py && for s in 1 2 3; do for p in GSD sfGSD; do python scripts/naph_spread.py $p $s; python scripts/naph_spread.py $p $s 0.16 30 330 8 rohf; done; done
+python scripts/spread_analyze.py && python scripts/shotnoise.py && python scripts/errbar_ceiling.py
+python scripts/penalty.py && python scripts/penalty_scan.py && python scripts/penalty_noise3.py && python scripts/penalty_shots.py
+python scripts/fix_study.py && python scripts/krylov_naph.py && python scripts/shiftinvert_test.py naph
+python scripts/naph_penalty.py GSD 3 0 30 420 12   # hours; resumes from its checkpoint
+python scripts/theory_check.py && python scripts/naph_bounds.py && python scripts/make_guarantee_table.py tables
+python scripts/property_filter.py && python scripts/naph_filter.py && python scripts/naph_pen_filter.py && python scripts/filter_compile.py   # spin densities, Gaussian filter and its cost (MU_F=1 python scripts/property_filter.py gives the 1 Eh spin-shift check)
+python scripts/filter_guarantee.py && python scripts/naph_certificate.py && python scripts/w_bound.py && python scripts/qpe_compare.py && python scripts/certified_cost.py && python scripts/w_bound_cost.py && python scripts/sec2_stress.py   # after filter_compile.py and naph_bounds.py
+python scripts/make_tables.py tables && python scripts/make_si_tables.py tables && python scripts/make_figures.py figures
+python scripts/make_framework_table.py tables && python scripts/make_fig_guarantee.py figures && python scripts/make_toc.py figures
 ```
 
 All numbers in the manuscript come from `results/*.json` and the logs.
-
-
-
-This work is supported by the National Science and Technology Council (Taiwan) grant No. NSTC 114-2112-M-182-002-MY3 and Chang Gung Memorial Hospital grant No. BMRPL94.
