@@ -1,0 +1,10 @@
+numpy==2.5.5
+scipy==1.18.1
+matplotlib==3.11.2
+pyscf==2.15.0
+openfermion==1.8.1
+cvxpy==1.9.3
+clarabel==0.11.1
+scs==3.3.2
+# PySCF properties extension (not on PyPI):
+#   pip install git+https://github.com/pyscf/properties
