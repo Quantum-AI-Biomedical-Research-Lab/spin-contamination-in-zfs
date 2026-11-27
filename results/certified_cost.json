@@ -1,0 +1,24 @@
+{
+ "x_cert": 4.098680996672434,
+ "T_Eh": 58.58407022558879,
+ "eps_sim": 1.2725547530069956e-06,
+ "walk_steps_mean": 2997.2165,
+ "walk_steps_max_4sigma": 14448,
+ "toffoli_per_circuit": 8254334.241,
+ "physical_qubits": 1033728,
+ "code_distance": 23,
+ "circuit_time_s": 216.676293,
+ "Ng": {
+  "GSD": 0.9890085347025769,
+  "sfGSD": 0.9888986458583694
+ },
+ "F": 1.2252531826306357,
+ "shots": 234500798.98102814,
+ "total_time_years_sequential": 1610.0959461032319,
+ "qsvt_degree": 4300,
+ "ae_repetitions": 33845,
+ "ae_toffoli_total": 801598518000,
+ "ae_time_days": 243.54123795728694,
+ "sigma_measurement_toffoli": 16412507064,
+ "prefilter_x1": 0.25
+}

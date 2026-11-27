@@ -1,0 +1,25 @@
+section,quantity,printed,computed,source,how
+4.1,"NH contaminant weight 1-w at chemical accuracy (GSD), %",0.08,0.0771207277087238,theory_check.json,NH.GSD.chem.w
+4.1,"NH contamination shift (err - err_proj), %",2.8,2.83,fix_NH.json,runs.GSD.metrics; difference of the printed 3.1 and 0.27
+4.2,"log-log slope of the shift in D, <S2>-2 = 4e-8 to 4e-4 (min, max)",0.499; 0.500,0.4985121017985755; 0.5000330154797843,measure.json,"controlled_scan, first five points"
+4.2,"eq 9 bound at chemical accuracy, 12-qubit (min, max), %",4; 31,3.812272842509895; 30.920640888495377,theory_check.json,chem.b11_split / D
+4.2,"eq 9 bound at chemical accuracy, naphthalene (min, max), %",24; 33,24.277773514135934; 32.81359773031908,naph_bounds.json,b11_split_pct
+4.2,"actual error at chemical accuracy, 12-qubit (min, max), %",0.03; 7.8,0.0314100239802877; 7.812266038794327,theory_check.json,chem.err / D
+4.2,"actual error at chemical accuracy, naphthalene (min, max), %",0.49; 2.3,0.49393968791795473; 2.3033287725109384,"naph_bounds.json, naph_summary.json",err_pct
+4.3,"fidelity at chemical accuracy, GSD and sfGSD, both orbital sets (min, max)",0.9975; 0.9976,0.9974565384466701; 0.9976154994566071,naph_summary.json,fid_chem
+4.3,"GSD split ROHF: contamination, target state, %",-1.2; +1.5,-1.1736051843493156; 1.470153718477177,naph_summary.json,D_err_chem_pct - Dproj_err_chem_pct
+4.3,"GSD split NO: contamination, target state, %",-0.28; -0.21,-0.2791983595325075; -0.21474132838309862,naph_summary.json,D_err_chem_pct - Dproj_err_chem_pct
+4.3,"difference of target-state terms sfGSD - GSD, NO (of the printed values +2.3 and -0.21), pp",2.5,2.51,naph_summary.json,unrounded difference 2.518
+4.3,"Eckart bound on s at chemical accuracy: naphthalene; small molecules (min, max)",0.15; 0.07; 0.12,0.15122643100293057; 0.07320304451164301; 0.1173018969093845,"theory_check.json, naph_bounds.json",sqrt(1.6 mEh / gap)
+4.4,"proven bound on the filtered D at tau = 3/(E1-E0), exact fidelity (min, max), %",0.12; 0.50,0.12364036045070155; 0.5021695269279167,"theory_check.json, naph_bounds.json",filter.bound_pct
+4.4,"smallest fidelity at chemical accuracy; largest discarded weight at tau = 3/(E1-E0), %",>0.989; <1.2,0.9894894398711644; 1.1418036411308896,"theory_check.json, propfilter_*.json, naph_bounds.json",chem.F; gauss.rule_spin.Ng
+4.4,"block-encoding calls per Hadamard test, in units of lambda_H tau: constant",1.6,1.5957691216057308,analytic,2*sqrt(2/pi) = mean of |t1|+|t2| in units of tau for Gaussian times
+4.5,"median certified length with sigma overestimated twofold vs exact sigma, largest change, %",10.5,10.487224331765233,finite_shot.json,baseline.tau_med / exact_sigma.tau_med
+4.5,"lengthening of the certified filter by W1 (max), %",<15,14.115570059222836,"w_bound.json, w_bound_cost.json",T01 with W1 / T01 with W
+4.5,"naphthalene sigma_H at chemical accuracy, GSD and sfGSD, mEh",38.1; 39.3,38.11098995688204; 39.29551371357607,naph_certificate.json,sigmaH_mEh
+4.5,"naphthalene Delta/2 = (E1-E0)/2, mEh",35.0,34.981190168650755,naph_bounds.json,gap_mEh / 2
+4.5,"first stage tau1 = 0.25/(E1-E0): reduction factor of sigma_H (about); weight lost (upper bound), %",~8; <0.2,7.919511085722816; 0.19468293939115533,naph_certificate.json,prefilter x1 = 0.25
+4.5,"reference determinant, filter centered at its energy: error in stretched NH at tau(E1-E0) = 3; smallest error in naphthalene up to 4, %",184; >13,184.37176556777675; 13.832124474537055,filter_guarantee.json,refdet.curve_shift
+4.5,"QPE at precision G'/2: leakage one gap above; walk-step factor needed to match the filter (min, max)",0.21; ~340; ~340,0.2105617772282498; 337.4917771262061; 345.9812706737238,qpe_projector_compare.json,M * leakage = 89.90-92.16 for M >= 5416
+4.5,"finite-shot replicas; certified bound exceeded; coverage at chemical accuracy (min, max), %","51,500; 2; 95; 97",51500; 2; 95.1; 97.3,finite_shot.json,all variants and scenarios
+5,"v2RDM slack (E0-E_LB)/(Delta/2): max over 12-qubit systems; naphthalene ROHF, NO; %",<1.5; 69; 77,1.47514505377232; 69.1079674442227; 77.30173276897274,v2rdm_bound.json,E0_minus_ELB_mEh / half-gap
