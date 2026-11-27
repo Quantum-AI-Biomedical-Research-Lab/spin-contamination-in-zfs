@@ -1,0 +1,462 @@
+{
+ "CH2": {
+  "D_exact": 0.7849744263134403,
+  "GSD": {
+   "A": {
+    "n_chem": 11,
+    "cnot_chem": 816,
+    "err_chem_pct": 1.0951921669309688,
+    "n_D1": 13,
+    "cnot_D1": 932,
+    "n_final": 54,
+    "dE_final": 2.6668347175018425e-07
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.004186993819658369
+   },
+   "B2": {
+    "n_chem": 23,
+    "cnot_chem": 1868,
+    "err_chem_pct": 0.15419359390324835,
+    "n_D1": 19,
+    "cnot_D1": 1548,
+    "n_final": 55,
+    "dE_final": 1.4106951340409069e-07
+   },
+   "C1": {
+    "n_chem": 11,
+    "cnot_chem": 816,
+    "err_chem_pct": 0.786383470909463,
+    "n_D1": 6,
+    "cnot_D1": 436,
+    "n_final": 54,
+    "dE_final": 2.6668347175018425e-07
+   },
+   "C2": {
+    "n_chem": 11,
+    "cnot_chem": 816,
+    "err_chem_pct": 2.170668422688642,
+    "n_D1": 19,
+    "cnot_D1": 1476,
+    "n_final": 54,
+    "dE_final": 2.6668347175018425e-07
+   },
+   "D": {
+    "n_chem": 11,
+    "cnot_chem": 816,
+    "err_chem_pct": 3.9962953766011817,
+    "n_D1": 22,
+    "cnot_D1": 1780,
+    "n_final": 54,
+    "dE_final": 2.6668347175018425e-07
+   }
+  },
+  "sfGSD": {
+   "A": {
+    "n_chem": 7,
+    "cnot_chem": 1336,
+    "err_chem_pct": 0.13566458668558262,
+    "n_D1": 4,
+    "cnot_D1": 792,
+    "n_final": 42,
+    "dE_final": 3.073808585440929e-08
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.006421129787668178
+   },
+   "B2": {
+    "n_chem": 13,
+    "cnot_chem": 2952,
+    "err_chem_pct": 0.05290128783661958,
+    "n_D1": 1,
+    "cnot_D1": 376,
+    "n_final": 51,
+    "dE_final": 1.1819167866633506e-10
+   },
+   "C1": {
+    "n_chem": 7,
+    "cnot_chem": 1336,
+    "err_chem_pct": 0.08421528058404334,
+    "n_D1": 0,
+    "cnot_D1": 0,
+    "n_final": 42,
+    "dE_final": 3.073808585440929e-08
+   },
+   "C2": {
+    "n_chem": 7,
+    "cnot_chem": 1336,
+    "err_chem_pct": 0.27956024996254664,
+    "n_D1": 4,
+    "cnot_D1": 792,
+    "n_final": 42,
+    "dE_final": 3.073808585440929e-08
+   },
+   "D": {
+    "n_chem": 7,
+    "cnot_chem": 1336,
+    "err_chem_pct": 2.0176491632549136,
+    "n_D1": 13,
+    "cnot_D1": 3112,
+    "n_final": 42,
+    "dE_final": 3.073808585440929e-08
+   }
+  }
+ },
+ "NH": {
+  "D_exact": 1.7089069749256738,
+  "GSD": {
+   "A": {
+    "n_chem": 20,
+    "cnot_chem": 1440,
+    "err_chem_pct": 3.1187918044306118,
+    "n_D1": 22,
+    "cnot_D1": 1664,
+    "n_final": 49,
+    "dE_final": 2.2010081579537655e-07
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.018393661997421873
+   },
+   "B2": {
+    "n_chem": 34,
+    "cnot_chem": 2452,
+    "err_chem_pct": 0.1834926743236916,
+    "n_D1": 34,
+    "cnot_D1": 2452,
+    "n_final": 64,
+    "dE_final": 4.669257691602979e-08
+   },
+   "C1": {
+    "n_chem": 20,
+    "cnot_chem": 1440,
+    "err_chem_pct": 1.9546151289281066,
+    "n_D1": 22,
+    "cnot_D1": 1664,
+    "n_final": 49,
+    "dE_final": 2.2010081579537655e-07
+   },
+   "C2": {
+    "n_chem": 20,
+    "cnot_chem": 1440,
+    "err_chem_pct": 1.0729622287603349,
+    "n_D1": 22,
+    "cnot_D1": 1664,
+    "n_final": 49,
+    "dE_final": 2.2010081579537655e-07
+   },
+   "D": {
+    "n_chem": 20,
+    "cnot_chem": 1440,
+    "err_chem_pct": 5.905599078718105,
+    "n_D1": 23,
+    "cnot_D1": 1776,
+    "n_final": 49,
+    "dE_final": 2.2010081579537655e-07
+   }
+  },
+  "sfGSD": {
+   "A": {
+    "n_chem": 14,
+    "cnot_chem": 2888,
+    "err_chem_pct": 0.07549811801337768,
+    "n_D1": 12,
+    "cnot_D1": 2192,
+    "n_final": 36,
+    "dE_final": 1.0209615197709354e-07
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.020925159272564997
+   },
+   "B2": {
+    "n_chem": 19,
+    "cnot_chem": 4352,
+    "err_chem_pct": -0.08845635410898116,
+    "n_D1": 4,
+    "cnot_D1": 1544,
+    "n_final": 44,
+    "dE_final": 5.593901164502313e-08
+   },
+   "C1": {
+    "n_chem": 14,
+    "cnot_chem": 2888,
+    "err_chem_pct": 0.2765072447244942,
+    "n_D1": 0,
+    "cnot_D1": 0,
+    "n_final": 36,
+    "dE_final": 1.0209615197709354e-07
+   },
+   "C2": {
+    "n_chem": 14,
+    "cnot_chem": 2888,
+    "err_chem_pct": 0.43424181578057064,
+    "n_D1": 12,
+    "cnot_D1": 2192,
+    "n_final": 36,
+    "dE_final": 1.0209615197709354e-07
+   },
+   "D": {
+    "n_chem": 14,
+    "cnot_chem": 2888,
+    "err_chem_pct": 0.42065669291779556,
+    "n_D1": 22,
+    "cnot_D1": 5120,
+    "n_final": 36,
+    "dE_final": 1.0209615197709354e-07
+   }
+  }
+ },
+ "NH_stretch": {
+  "D_exact": 0.8928505361976506,
+  "GSD": {
+   "A": {
+    "n_chem": 14,
+    "cnot_chem": 928,
+    "err_chem_pct": 5.536896870739149,
+    "n_D1": 16,
+    "cnot_D1": 1152,
+    "n_final": 54,
+    "dE_final": 1.5429728961180444e-07
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.10873102140985935
+   },
+   "B2": {
+    "n_chem": 13,
+    "cnot_chem": 880,
+    "err_chem_pct": -4.597011662982432,
+    "n_D1": 23,
+    "cnot_D1": 1444,
+    "n_final": 71,
+    "dE_final": 9.592326932761353e-11
+   },
+   "C1": {
+    "n_chem": 14,
+    "cnot_chem": 928,
+    "err_chem_pct": 5.527446658131351,
+    "n_D1": 16,
+    "cnot_D1": 1152,
+    "n_final": 54,
+    "dE_final": 1.5429728961180444e-07
+   },
+   "C2": {
+    "n_chem": 14,
+    "cnot_chem": 928,
+    "err_chem_pct": -3.8711842338757307,
+    "n_D1": 28,
+    "cnot_D1": 2028,
+    "n_final": 54,
+    "dE_final": 1.5429728961180444e-07
+   },
+   "D": {
+    "n_chem": 14,
+    "cnot_chem": 928,
+    "err_chem_pct": -0.8241013961071812,
+    "n_D1": 28,
+    "cnot_D1": 2028,
+    "n_final": 54,
+    "dE_final": 1.5429728961180444e-07
+   }
+  },
+  "sfGSD": {
+   "A": {
+    "n_chem": 12,
+    "cnot_chem": 2192,
+    "err_chem_pct": 0.6467868946818305,
+    "n_D1": 16,
+    "cnot_D1": 3296,
+    "n_final": 45,
+    "dE_final": 2.3606510524132318e-08
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.10873102140985935
+   },
+   "B2": {
+    "n_chem": 9,
+    "cnot_chem": 2360,
+    "err_chem_pct": -4.736329012290466,
+    "n_D1": 14,
+    "cnot_D1": 3856,
+    "n_final": 51,
+    "dE_final": 1.4488676924884203e-10
+   },
+   "C1": {
+    "n_chem": 12,
+    "cnot_chem": 2192,
+    "err_chem_pct": 0.6796324556625108,
+    "n_D1": 16,
+    "cnot_D1": 3296,
+    "n_final": 45,
+    "dE_final": 2.3606510524132318e-08
+   },
+   "C2": {
+    "n_chem": 12,
+    "cnot_chem": 2192,
+    "err_chem_pct": 2.601702624056222,
+    "n_D1": 16,
+    "cnot_D1": 3296,
+    "n_final": 45,
+    "dE_final": 2.3606510524132318e-08
+   },
+   "D": {
+    "n_chem": 12,
+    "cnot_chem": 2192,
+    "err_chem_pct": -11.751595466057172,
+    "n_D1": 16,
+    "cnot_D1": 3296,
+    "n_final": 45,
+    "dE_final": 2.3606510524132318e-08
+   }
+  }
+ },
+ "O2": {
+  "D_exact": 0.8871704437693352,
+  "GSD": {
+   "A": {
+    "n_chem": 6,
+    "cnot_chem": 576,
+    "err_chem_pct": -0.0313377206139139,
+    "n_D1": 6,
+    "cnot_D1": 576,
+    "n_final": 16,
+    "dE_final": 3.694822225952521e-13
+   },
+   "B": {
+    "n_chem": 6,
+    "cnot_chem": 608,
+    "err_chem_pct": -0.03133020913451111,
+    "n_D1": 6,
+    "cnot_D1": 608,
+    "n_final": 16,
+    "dE_final": 3.126388037344441e-13
+   },
+   "B2": {
+    "n_chem": 6,
+    "cnot_chem": 608,
+    "err_chem_pct": -0.03133020913451111,
+    "n_D1": 6,
+    "cnot_D1": 608,
+    "n_final": 16,
+    "dE_final": 0.0
+   },
+   "C1": {
+    "n_chem": 6,
+    "cnot_chem": 576,
+    "err_chem_pct": -0.0317375372612833,
+    "n_D1": 6,
+    "cnot_D1": 576,
+    "n_final": 16,
+    "dE_final": 3.694822225952521e-13
+   },
+   "C2": {
+    "n_chem": 6,
+    "cnot_chem": 576,
+    "err_chem_pct": -0.031337137822240284,
+    "n_D1": 6,
+    "cnot_D1": 576,
+    "n_final": 16,
+    "dE_final": 3.694822225952521e-13
+   },
+   "D": {
+    "n_chem": 6,
+    "cnot_chem": 576,
+    "err_chem_pct": 2.944792149645555,
+    "n_D1": 9,
+    "cnot_D1": 720,
+    "n_final": 16,
+    "dE_final": 3.694822225952521e-13
+   }
+  },
+  "sfGSD": {
+   "A": {
+    "n_chem": 4,
+    "cnot_chem": 1264,
+    "err_chem_pct": -0.2143427448805571,
+    "n_D1": 4,
+    "cnot_D1": 1264,
+    "n_final": 14,
+    "dE_final": 1.1368683772161603e-13
+   },
+   "B": {
+    "n_chem": null,
+    "cnot_chem": null,
+    "err_chem_pct": null,
+    "n_D1": null,
+    "cnot_D1": null,
+    "n_final": 80,
+    "dE_final": 0.02573037705607817
+   },
+   "B2": {
+    "n_chem": 7,
+    "cnot_chem": 2880,
+    "err_chem_pct": -0.3314466025998006,
+    "n_D1": 7,
+    "cnot_D1": 2880,
+    "n_final": 13,
+    "dE_final": 5.684341886080802e-14
+   },
+   "C1": {
+    "n_chem": 4,
+    "cnot_chem": 1264,
+    "err_chem_pct": -0.21331901818592416,
+    "n_D1": 4,
+    "cnot_D1": 1264,
+    "n_final": 14,
+    "dE_final": 1.1368683772161603e-13
+   },
+   "C2": {
+    "n_chem": 4,
+    "cnot_chem": 1264,
+    "err_chem_pct": -0.21434086001020541,
+    "n_D1": 4,
+    "cnot_D1": 1264,
+    "n_final": 14,
+    "dE_final": 1.1368683772161603e-13
+   },
+   "D": {
+    "n_chem": 4,
+    "cnot_chem": 1264,
+    "err_chem_pct": 39.460736681215565,
+    "n_D1": 8,
+    "cnot_D1": 1456,
+    "n_final": 14,
+    "dE_final": 1.1368683772161603e-13
+   }
+  }
+ }
+}
